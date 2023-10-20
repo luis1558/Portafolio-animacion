@@ -1,19 +1,21 @@
+
 *{
-    margin: 0; padding: 0; 
+    margin: 0; 
+    padding: 0;
     box-sizing: border-box; 
     outline: none;
 } 
 
 body{
     font-family: 'Montserrat', sans-serif; 
-    background-color: #010101; 
+    background-color: #fff; 
     overflow-x: hidden; 
-    color: #fff;
+    color: #010101;
 }
 
 a {
     text-decoration: none; 
-    color: #fff;
+    color: #010101;
 }
 
 header {
@@ -46,7 +48,7 @@ nav ul li a:before {
     bottom: -10px;
     width: 0;
     height: 1px;
-    background-color: #fff;
+    background-color: #010101;
     transition: all ease 0.5s;
 }
 
@@ -78,6 +80,8 @@ nav ul li a:hover:before {
 
 .content .img_group img {
     opacity: 0;
+    width: 250px;
+    height: 300px;
 }
 
 h1 {
@@ -119,4 +123,61 @@ h1 .photographer:hover:before {
     font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 767px) {
+    header {
+        padding: 20px;
+    }
+
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .img_group {
+        padding: 0;
+    }
+
+    .img_group img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .bottom_text {
+        text-align: center;
+    }
+
+    .bottom_text h5 {
+        font-size: 14px;
+    }
+
+    /*boton*/
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        background-color: #010101;
+        transition: max-height 0.3s ease-in-out;
+    }
+    
+    nav ul.active {
+        display: block;
+    }
 }
